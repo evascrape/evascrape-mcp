@@ -1,0 +1,8 @@
+/test/
+.DS_Store
+*.log
+/.env
+/.env.*
+/server.json
+*.mcpb
+/package-lock.json

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.evascrape/evascrape",
+  "title": "Evascrape",
+  "description": "Find business leads with emails from Google Maps, Apollo.io and LinkedIn. Prepaid, API key.",
+  "websiteUrl": "https://evascrape.com/docs",
+  "repository": {
+    "url": "https://github.com/evascrape/evascrape-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@evascrape/mcp",
+      "version": "1.0.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "EVASCRAPE_API_KEY",
+          "description": "API key from https://app.evascrape.com/account/api-keys",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "EVASCRAPE_BASE_URL",
+          "description": "Override the API host (https only). Defaults to https://app.evascrape.com",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
