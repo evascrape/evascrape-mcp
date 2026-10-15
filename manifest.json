@@ -5,8 +5,15 @@
   "version": "1.0.0",
   "description": "Find business leads with email addresses from Google Maps, Apollo.io and LinkedIn.",
   "long_description": "Ask Claude for a lead list in plain words, for example \"find 200 dentists in Austin with their emails\". Evascrape runs the extraction on its own servers and returns structured records: names, companies, emails, phones, websites. Jobs are paid from a prepaid Evascrape balance (top-ups from $10, no free credit); estimate_cost prices a job before it starts. Requires an Evascrape API key from app.evascrape.com/account/api-keys.",
-  "author": { "name": "Evascrape", "email": "info@evascrape.com", "url": "https://evascrape.com" },
-  "repository": { "type": "git", "url": "https://github.com/evascrape/evascrape-mcp" },
+  "author": {
+    "name": "Evascrape",
+    "email": "info@evascrape.com",
+    "url": "https://github.com/evascrape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evascrape/evascrape-mcp"
+  },
   "homepage": "https://evascrape.com/docs",
   "documentation": "https://github.com/evascrape/evascrape-mcp#readme",
   "support": "https://github.com/evascrape/evascrape-mcp/issues",
@@ -16,26 +23,68 @@
     "entry_point": "src/index.js",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/src/index.js"],
-      "env": { "EVASCRAPE_API_KEY": "${user_config.api_key}" }
+      "args": [
+        "${__dirname}/src/index.js"
+      ],
+      "env": {
+        "EVASCRAPE_API_KEY": "${user_config.api_key}"
+      }
     }
   },
   "tools": [
-    { "name": "google_maps_leads", "description": "Find local businesses and their contact details on Google Maps. Spends prepaid credit." },
-    { "name": "apollo_export", "description": "Export a people search you built on Apollo.io. Spends prepaid credit." },
-    { "name": "linkedin_leads", "description": "Build a list of people from LinkedIn audiences by filters. Spends prepaid credit." },
-    { "name": "job_status", "description": "Check whether an extraction job has finished." },
-    { "name": "download", "description": "Read the records of a finished job." },
-    { "name": "check_balance", "description": "Show the remaining prepaid credit." },
-    { "name": "estimate_cost", "description": "Price a job before starting it, without charging." }
+    {
+      "name": "google_maps_leads",
+      "description": "Find local businesses and their contact details on Google Maps. Spends prepaid credit."
+    },
+    {
+      "name": "apollo_export",
+      "description": "Export a people search you built on Apollo.io. Spends prepaid credit."
+    },
+    {
+      "name": "linkedin_leads",
+      "description": "Build a list of people from LinkedIn audiences by filters. Spends prepaid credit."
+    },
+    {
+      "name": "job_status",
+      "description": "Check whether an extraction job has finished."
+    },
+    {
+      "name": "download",
+      "description": "Read the records of a finished job."
+    },
+    {
+      "name": "check_balance",
+      "description": "Show the remaining prepaid credit."
+    },
+    {
+      "name": "estimate_cost",
+      "description": "Price a job before starting it, without charging."
+    }
   ],
   "tools_generated": false,
-  "keywords": ["leads", "lead generation", "google maps", "apollo", "linkedin", "email", "prospecting", "b2b"],
+  "keywords": [
+    "leads",
+    "lead generation",
+    "google maps",
+    "apollo",
+    "linkedin",
+    "email",
+    "prospecting",
+    "b2b"
+  ],
   "license": "MIT",
-  "privacy_policies": ["https://evascrape.com/privacy-policy"],
+  "privacy_policies": [
+    "https://evascrape.com/privacy-policy"
+  ],
   "compatibility": {
-    "platforms": ["darwin", "win32", "linux"],
-    "runtimes": { "node": ">=18.0.0" }
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
   },
   "user_config": {
     "api_key": {
